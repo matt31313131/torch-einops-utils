@@ -1,7 +1,8 @@
 from __future__ import annotations
+from typing import Literal
 
 import torch
-from torch import is_tensor
+from torch import tensor, is_tensor, cat, stack
 import torch.nn.functional as F
 
 from einops import rearrange, repeat, reduce, pack, unpack
@@ -37,6 +38,35 @@ def pad_left_at_dim(t, pad: int, **kwargs):
 
 def pad_right_at_dim(t, pad: int, **kwargs):
     return pad_at_dim(t, (0, pad), **kwargs)
+
+# better pad sequence
+
+def pad_sequence(
+    tensors,
+    *,
+    dim = -1,
+    value = 0.,
+    left = False,
+    dim_stack = 0,
+    return_lens = False
+):
+    if len(tensors) == 0:
+        return None
+
+    device = first(tensors).device
+
+    lens = tensor([t.shape[dim] for t in tensors], device = device)
+    max_len = lens.amax().item()
+
+    pad_fn = pad_left_at_dim if left else pad_right_at_dim
+    padded_tensors = [pad_fn(t, max_len - t_len, dim = dim, value = value) for t, t_len in zip(tensors, lens)]
+
+    stacked = stack(padded_tensors, dim = dim_stack)
+
+    if not return_lens:
+        return stacked
+
+    return stacked, lens
 
 # einops pack
 

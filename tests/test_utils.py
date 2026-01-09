@@ -5,7 +5,8 @@ from torch_einops_utils.torch_einops_utils import (
     pad_at_dim,
     pad_left_at_dim,
     pad_right_at_dim,
-    pack_with_inverse
+    pack_with_inverse,
+    pad_sequence
 )
 
 def test_exist():
@@ -33,3 +34,13 @@ def test_pack_with_inverse():
     t, u = inverse(t)
     assert t.shape == (3, 12, 2, 2)
     assert u.shape == (3, 4, 2)
+
+def test_better_pad_sequence():
+
+    x = torch.randn(2, 4, 5)
+    y = torch.randn(2, 3, 5)
+    z = torch.randn(2, 1, 5)
+
+    packed, lens = pad_sequence([x, y, z], dim = 1, return_lens = True)
+    assert packed.shape == (3, 2, 4, 5)
+    assert lens.tolist() == [4, 3, 1]
