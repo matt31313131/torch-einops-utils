@@ -5,4 +5,5 @@ from torch_einops_utils.torch_einops_utils import (
     pad_right_at_dim,
     pad_sequence,
     pack_with_inverse,
+    lens_to_mask
 )

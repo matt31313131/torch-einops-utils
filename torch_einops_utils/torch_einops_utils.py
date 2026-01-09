@@ -2,7 +2,7 @@ from __future__ import annotations
 from typing import Literal
 
 import torch
-from torch import tensor, is_tensor, cat, stack
+from torch import tensor, is_tensor, cat, stack, arange
 import torch.nn.functional as F
 
 from einops import rearrange, repeat, reduce, pack, unpack
@@ -19,6 +19,18 @@ def first(arr):
     return arr[0]
 
 # exported functions
+
+# masking
+
+def lens_to_mask(lens, max_len = None):
+    device = lens.device
+
+    if not exists(max_len):
+        max_len = lens.amax().item()
+
+    seq = arange(max_len, device = device)
+    lens = rearrange(lens, '... -> ... 1')
+    return seq < lens
 
 # padding
 

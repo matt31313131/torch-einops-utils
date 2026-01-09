@@ -6,7 +6,8 @@ from torch_einops_utils.torch_einops_utils import (
     pad_left_at_dim,
     pad_right_at_dim,
     pack_with_inverse,
-    pad_sequence
+    pad_sequence,
+    lens_to_mask
 )
 
 def test_exist():
@@ -44,3 +45,6 @@ def test_better_pad_sequence():
     packed, lens = pad_sequence([x, y, z], dim = 1, return_lens = True)
     assert packed.shape == (3, 2, 4, 5)
     assert lens.tolist() == [4, 3, 1]
+
+    mask = lens_to_mask(lens)
+    assert torch.allclose(mask.sum(dim = -1), lens)
