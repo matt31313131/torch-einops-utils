@@ -73,9 +73,15 @@ def slice_at_dim(t, slc, dim = -1):
     return t[tuple(full_slice)]
 
 def slice_left_at_dim(t, length, dim = -1):
+    if length == 0:
+        return slice_at_dim(t, slice(0, 0), dim = dim)
+
     return slice_at_dim(t, slice(None, length), dim = dim)
 
 def slice_right_at_dim(t, length, dim = -1):
+    if length == 0:
+        return slice_at_dim(t, slice(0, 0), dim = dim)
+
     return slice_at_dim(t, slice(-length, None), dim = dim)
 
 # dimensions
